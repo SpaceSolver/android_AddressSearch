@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">JSON_SendAndReceive</string>
+    <string name="addressNumberText">郵便番号</string>
+    <string name="AddressText">住所</string>
+    <string name="inputHintText">郵便番号を入力</string>
+    <string name="outputHintText1">県</string>
+    <string name="outputHintText2">市町村</string>
+    <string name="outputHintText3">番地</string>
+</resources>
