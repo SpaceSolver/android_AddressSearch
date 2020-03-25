@@ -72,28 +72,21 @@ public class MainActivity extends AppCompatActivity {
         try
         {
             Log.d("Debug", "Response is: OK\n");
+            
+            TextView textview1 = findViewById(R.id.outputAddress1);
+            TextView textview2 = findViewById(R.id.outputAddress2);
+            TextView textview3 = findViewById(R.id.outputAddress3);
 
-            // 住所１
-            TextView textview = findViewById(R.id.outputAddress1);
             JSONArray datas = response.getJSONArray("results");
             for (int i = 0; i < datas.length(); i++) {
                 JSONObject data = datas.getJSONObject(i);
+                // 住所１
                 String address1 = data.getString("address1");
-                textview.setText(address1);
-            }
-
-            // 住所２
-            TextView textview2 = findViewById(R.id.outputAddress2);
-            for (int i = 0; i < datas.length(); i++) {
-                JSONObject data = datas.getJSONObject(i);
+                textview1.setText(address1);
+                // 住所2
                 String address2 = data.getString("address2");
                 textview2.setText(address2);
-            }
-
-            // 住所3
-            TextView textview3 = findViewById(R.id.outputAddress3);
-            for (int i = 0; i < datas.length(); i++) {
-                JSONObject data = datas.getJSONObject(i);
+                // 住所3
                 String address3 = data.getString("address3");
                 textview3.setText(address3);
             }
